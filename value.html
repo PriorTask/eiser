@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Eiser-CheckoutPage</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+
+    }
+    body{
+      position: relative;
+    }
+    .upper{
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+        background-color: #f6f6f6;
+        height: 25px;
+        width: 100vw;
+        padding: 2px;
+        font-size: small;
+
+    }
+    /* .upper1{
+        margin: px;
+        padding: 2px;
+    } */    
+    .upper2{
+        margin-left: 400px;
+    }
+    .left img{
+        float: left;
+        margin-left: 10px;
+        width: 100px;
+        height: 100px;
+    }
+    /* .navbar_logo{
+      display: inline-block;
+    } */
+    .navbar {
+      overflow: hidden;
+      background-color: rgb(255, 238, 218);
+      margin-top: 0px;
+      /* margin-top: 30px; */
+      display: flex;
+      /* justify-content: flex-end; */
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      /* padding-right: 0px; */
+    }
+    .navbar a {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  float:left;  
+  font-size: 16px;
+  color:rgb(6, 77, 21) ;
+  text-align: center;
+  padding: 14px 20px 14px 20px;
+  text-decoration: none;
+}
+
+.dropdown {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(6, 77, 21) ;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  /* background-color:  white; */
+  text-emphasis-color: green;
+}
+
+.dropdown-content {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: none;
+  position: absolute;
+  background-color: rgb(233, 239, 226) ;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.logo{
+  float: left;
+  /* margin-right: 0px; */
+  padding: 10px;
+  background-color: rgb(255, 238, 218);
+  margin-right: 20px;
+
+}
+/* .upper_2{
+  display: flex;
+  padding: 50 50 50 50;
+  background-color: #f6f6f6;
+  margin: 0;
+} */
+.upper_2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #f6f6f6;
+}
+
+.upper_2a {
+    padding-left: 280px; 
+    
+}
+
+.upper_2b {
+    padding-right: 280px;
+    margin-left: 100px; 
+}
+.upper_3{
+  background-color: #f6f6f6;
+  margin-top: 100px;
+  max-width: 1000px;
+  margin-left: 280px;
+  padding: 10px;
+}
+.upper_4{
+  background-color: white;
+  margin-top: 0px;
+  max-width: 1000px;
+  margin-left: 280px;
+  padding: 10px;
+  color: grey;
+
+}
+.user_1{  
+  background-color: #f6f6f6;
+  margin-top: 10px;
+  max-width: 1000px;
+  margin-left: 280px;
+  padding: 10px;
+  color: black;
+}
+#user_1{
+  margin-right: 50px;
+}
+.upper_4a{
+  background-color: white;
+  margin-top: 0px;
+  max-width: 1000px;
+  margin-left: 280px;
+  padding: 10px;
+  color: grey;  
+}
+.upper_5{
+  background-color: white;
+  margin-top: 10px;
+  max-width: 1000px;
+  margin-left: 280px;
+  padding: 10px;
+  color: grey;  
+  display: flex;
+}
+.upper_5b{
+  background-color: #f6f6f6;
+  width: 25vw;
+  padding: 20px;
+}
+.upper_5b2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* #pick{
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px; 
+  padding: 10px;
+  margin-left: 0px;
+}
+#pick input {
+            width: 100%; 
+            height: 100%;
+            box-sizing: border-box; 
+        } */
+.order-notes {
+  width: 95%;
+  height: 150px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  resize: vertical;
+}
+.upper_6{
+  background-color: black;
+
+}
+.le{
+  text-align: left;
+}
+#table{
+  border-spacing: 30px;
+}
+#table_1{
+  border-spacing: 8px;
+  border-collapse: collapse;
+}
+#t{
+  border-bottom: 1px solid #0d0c0c;
+}
+#table_1 td, th{
+  padding: 8px;
+}
+#upper_6user{
+  width: 80%;
+  height: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: rgb(124, 116, 116);
+}
+#upper_6user::placeholder {
+  color: white; /* Change to your desired color */
+  opacity: 1; 
+}
+.cont{
+  display: flex;
+  justify-content: center;
+
+}
+/* Mobile devices (portrait) */
+@media (max-width: 600px) {
+    .upper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .upper1, .upper2 {
+        margin: 0;
+        padding: 0;
+    }
+    .upper2 {
+        margin-left: 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar a, .dropdown .dropbtn {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+    .logo img {
+        width: 80px;
+        height: 80px;
+    }
+    .upper_2 {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .upper_2a, .upper_2b {
+        padding: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .upper_3, .upper_4, .user_1, .upper_4a, .upper_5 {
+        margin-left: 0;
+        padding: 10px;
+        width: 100%;
+    }
+    .user input, .order-notes, .upper_5b, .upper_5b2, .upper_5b3 {
+        width: 100%;
+    }
+    .upper_5b {
+        padding: 10px;
+    }
+    .upper_5b2, .upper_5b3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .upper_5a {
+        width: 100%;
+    }
+    #table {
+        border-spacing: 10px;
+    }
+    #table_1 {
+        border-spacing: 5px;
+    }
+    .span {
+        text-align: center;
+    }
+    .cont {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cont .fb, .cont .tw, .cont .gl, .cont .Be {
+        margin: 5px;
+    }
+}
+
+/* Tablets and small desktops */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar a, .dropdown .dropbtn {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+    .logo img {
+        width: 90px;
+        height: 90px;
+    }
+    .upper_2 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .upper_2a, .upper_2b {
+        padding: 20px;
+    }
+    .upper_3, .upper_4, .user_1, .upper_4a, .upper_5 {
+        margin-left: 20px;
+        padding: 20px;
+        width: calc(100% - 40px);
+    }
+    .user input, .order-notes {
+        width: calc(100% - 20px);
+    }
+    .upper_5b {
+        width: 100%;
+    }
+    .upper_5b2, .upper_5b3 {
+        display: flex;
+        flex-direction: row;
+    }
+    #table {
+        border-spacing: 20px;
+    }
+    #table_1 {
+        border-spacing: 10px;
+    }
+    .span {
+        text-align: left;
+    }
+    .cont {
+        flex-direction: row;
+    }
+}
+
+/* Large desktops and wider screens */
+@media (min-width: 1025px) {
+    .upper {
+        display: flex;
+        justify-content: center;
+    }
+    .navbar {
+        display: flex;
+        justify-content: center;
+    }
+    .logo img {
+        width: 100px;
+        height: 100px;
+    }
+    .upper_2 {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 20px;
+    }
+    .upper_3, .upper_4, .user_1, .upper_4a, .upper_5 {
+        margin-left: 280px;
+        width: calc(100% - 560px);
+    }
+    .user input, .order-notes {
+        width: 100%;
+    }
+    #table {
+        border-spacing: 30px;
+    }
+    #table_1 {
+        border-spacing: 8px;
+    }
+    .cont {
+        flex-direction: row;
+    }
+}
+
+
+
+
+
+</style>
+<body>
+  <i class="fas fa-check-circle"></i>
+
+    <div class="upper">
+        <div class="upper1">
+          <p>PHONE:+01 25625235   |
+             EMAIL: INFO@EISER.COM</p>
+        </div>
+        <div class="upper2">
+            <p>GIFT CARD | TRACK ORDER |  CONTACT US</p>
+        </div>
+    </div>
+
+       
+    
+      <div class="navbar">  
+        <div class="logo">
+          <img src="logo.png" alt="">
+        </div>      
+      <a href="https://www.google.com">HOME</a>
+        
+        <div class="dropdown">
+          <button class="dropbtn"> SHOP
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://www.google.com" target="_blank"> SHOP CATEGORY</a>
+            <a href="https://www.google.com" target="_blank"> PRODUCT DETAILS</a>
+            <a href="https://www.google.com" target="_blank"> PRODUCT CHECKOUT</a>
+            <a href="https://www.google.com" target="_blank"> SHOPPING CART</a>
+
+          </div>
+        </div> 
+        <div class="dropdown">
+            <button class="dropbtn"> BLOG
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="https://www.google.com" target="_blank"> BLOG </a>
+              <a href="https://www.google.com" target="_blank">BLOG DETAILS</a>
+              
+           </div>
+        </div> 
+        <div class="dropdown">
+              <button class="dropbtn">PAGES
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="https://www.google.com" target="_blank"> TRACKING </a>
+                <a href="https://www.google.com" target="_blank"> ELEMENTS </a>
+             </div>
+        </div> 
+        <div class="dropdown">
+              <button class="dropbtn">CONTACT
+                <i class="fa fa-caret-down"></i>
+              </button>
+        </div>
+      <!-- <div class="elements">
+        <ul class="nav navbar-nav navbar-right right_nav pull-right">
+          <li class="nav-item">
+            <a href="#" class="icons">
+              <i class="ti-search" aria-hidden="true"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="icons">
+              <i class="ti-shopping-cart"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="icons">
+              <i class="ti-user" aria-hidden="true"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="icons">
+              <i class="ti-heart" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div> -->
+    </div>
+    <div class="upper_2">
+      <div class="upper_2a">
+      <h2>Product Checkout</h2>
+      <br>
+      <p>Very us move be blessed multiply night</p>
+      </div>
+      <div class="upper_2b">
+        <p>Home / Product Checkout</p>
+      </div>
+    </div>
+  <div class="upper_3">
+    <p>Returning Customer? <u style="color: lightgreen;">Click here to login</u></p>
+  </p>
+  </div>
+  <br>
+  <div class="upper_4">
+    <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed to the Billing & Shipping section.
+    </p>
+    <br>
+    <div class="user">
+      <input type="text" id="user_1"  placeholder="Username or Email" style="padding: 10px 50px; text-align: left;"/>
+      <input type="text" id="user_2" placeholder="Password" style="padding: 10px 50px; text-align: left;">
+    </div>
+    <br>
+    <button type="submit" style="background-color: rgb(37, 213, 37); color: white; padding: 15px; border: none;"> <b>Send Message</b></button>
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">Remember Me
+    <br><br>
+    <p>Lost your password?</p>      
+  </div>
+  <div class="user_1">
+    <p>Have a Coupon? <u style="color: lightgreen;">Click to enter your code</u></p>
+  </p>
+  </div>
+  <div class="upper_4a">
+   <input type="text" id="user_3" placeholder="Enter Coupon Code" width="200px">
+   <br><br>
+   <button type="submit" style="background-color: white;padding: 5px; border: 1px solid grey;"><b>APPLY COUPON</b></button> 
+  </div>  
+  <div class="upper_5">
+    <div class="upper_5a">
+    <h2 style="color: black;">Billing Details</h2>
+    <!-- <hr style="background-color: grey;"> -->
+    <hr style="background-color: grey; height: 0.5px; border: none; max-width: 100%;">
+
+    <br>
+    <input type="text" id="user_1"  placeholder="First Name" style="padding: 10px 50px; text-align: left; width:45%;"/>
+    <input type="text" id="user_2" placeholder="Last Name" style="padding: 10px 50px; text-align: left; width: 43%;">
+    <br>
+    <input type="text" id="user_1"  placeholder="Company Name" style="padding: 10px 50px; text-align: left; width: 96%; margin-top: 25px;"/>
+    <br>
+    <!-- <input type="text" id="user_2" placeholder="Phone Number" style="padding: 10px 50px; text-align: left; width: 45%; margin-top: 25px;">    
+    <input type="text" id="user_1"  placeholder="Email Address" style="padding: 10px 50px; text-align: left; width: 45%; margin-top: 25px;"/> -->
+    <input type="text" id="user_1"  placeholder="Phone Number" style="padding: 10px 50px; text-align: left; width:45%; margin-top: 25px;"/>
+    <input type="text" id="user_2" placeholder="Email Address" style="padding: 10px 50px; text-align: left; width: 43%; margin-top: 25px;">
+    <input type="text" id="user_2" placeholder="Country" style="padding: 10px 50px; text-align: left; width: 96%; margin-top: 25px;">
+    <br>
+    <input type="text" id="user_1"  placeholder="Address line 01" style="padding: 10px 50px; text-align: left; width: 96%; margin-top: 25px;"/>
+    <br>
+    <input type="text" id="user_2" placeholder="Address Line 02" style="padding: 10px 50px; text-align: left; width: 96%; margin-top: 25px;">
+    <br>
+    <input type="text" id="user_2" placeholder="Town/City" style="padding: 10px 50px; text-align: left; width: 96%; margin-top: 25px;">
+    <br>
+    <input type="text" id="user_2" placeholder="District" style="padding: 10px 50px; text-align: left; width: 96%; margin-top: 25px;">
+      <select id="user_2">
+       <option value="District"></option>
+       <option value="District"></option>
+       <option value="District"></option>
+      </select>      
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="margin-top: 25px;"> Create an account?  
+    <br> <br>
+    <div class="upper_5a1">
+      <h2 style="color: black;">Shipping Details</h2>
+      <hr style="background-color: grey; height: 0.5px; border: none;">
+      <br>
+      <form action="">
+        <input type="checkbox">
+        <label for="value">Ship to a different address?
+        </label><br>
+      </form>
+      <br>
+      <!-- <div id="pick">
+      <input type="text" placeholder="Order Notes">
+      </div> -->
+      <textarea class="order-notes" placeholder="Order Notes"></textarea>
+
+    </div>
+
+  </div>
+    <div class="upper_5b">
+      <h2 style="color: black;">Your Order</h2>
+      <hr style="background-color: grey; height: 0.5px; border: none; margin-top: 5px;">
+      <table id="table_1" style="margin-top: 8px;">
+        <tr id="t">
+          <th colspan="2" style="text-align: left;">Product</th>
+          <th>Total</th>
+        </tr>
+        <tr id="t">
+          <td>Fresh Blackberry</td>
+          <td><b>x 02</b></td>
+          <td class="le">$720.00</td>
+        </tr>
+        <tr id="t">
+          <td>Fresh Tomatoes</td>
+          <td><b>x 02</b></td>
+          <td class="le">$720.00</td>
+        </tr>
+        <tr id="t">
+          <td>Fresh Broccoli</td>
+          <td><b>x 02</b></td>
+          <td class="le">$720.00</td>
+        </tr>
+        <tr id="t">
+         <td colspan="2" ><b>SUBTOTAL</b></td>
+         <td colspan="2" class="le">$2160.00</td>
+        </tr>
+        <tr id="t">
+          <td colspan="2"><b>SHIPPING</b></td>
+          <td colspan="2" class="le">Flat Rate: $50.00</td>
+        </tr>
+        <tr id="t">
+          <td colspan="2"><b>TOTAL</b></td>
+          <td colspan="2" class="le">$2210.00</td>
+          </tr>
+      </table>   
+      <br>  
+      <!-- <input type="checkbox" id="vehicle1" name="vehicle1"  style="margin-top: 25px;"> CHECK PAYMENTS -->
+      <input type="checkbox" id="payment" name="payment" style="margin-right: 10px;">
+      <label for="payment" style="font-family: Arial, sans-serif; color: black; font-size: 16px;">CHECK PAYMENTS</label>
+      <br><br>
+      <div class="upper_5b1">
+        <p style="background-color: white; margin: 10px; padding: 20px;">Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+      </div>
+      <br>
+      <div class="upper_5b2">
+        <input type="checkbox" id="payment" name="payment" style="margin-right: 10px;">
+        <label for="payment" style="font-family: Arial, sans-serif; color: black; font-size: 16px; margin-right: 150px;">PAYPAL</label>      
+        <img src="img_2.png" alt="error" style="float: right; height: 30px; width: 50px;">
+      </div>
+    <br>
+    <div class="upper_5b3">
+      <p style="color: lightgreen; background-color: white;margin: 10px; padding: 20px;">Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+    </div>
+    <!-- <br> -->
+    <form action="">
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1">
+          <span style="font-size: 14px;">I've read and accept the </span>
+          <span style="color: lightgreen; font-size: 16px;">terms and conditions<sup>*</sup></span>
+      </label><br>
+    </form>
+    <br>
+    <div class="upper_5c">
+      <p style="background-color: green; color: white; padding: 10px; margin-top: 5px; border-radius: 10px; text-align: center; margin-bottom: 2px;">PROCEED TO PAYPAL</p>
+    </div>         
+    </div>  
+  </div>
+  <div class="upper_6" style="padding: 180px;">
+    <table id="table">
+      <tr style="color: white; text-align: left; font-size: larger;">
+        <th>Top Products</th>
+        <th>Quick Links</th>
+        <th>Features</th>
+        <th>Resources</th>
+        <th>Newsletters</th>
+      </tr>
+      <tr style="color: rgb(113, 107, 107); font-size: large;">
+        <td>Managed Websites</td>
+        <td>Jobs</td>
+        <td>Jobs</td>
+        <td>Guides</td>
+        <td>You can trust us, we only send promo offers.</td>
+      </tr>
+      <tr style="color: rgb(113, 107, 107); margin-top: 10px; font-size: large;">
+        <td>Managed reputation</td>
+        <td>Brand Assets</td>
+        <td>Brand Assets</td>
+        <td>Research</td>
+        <td rowspan="2">
+          <input type="text" id="upper_6user" placeholder="Your Email Address">
+          <button type="submit" style="background-color: lawngreen; color: white;">SUBSCRIBE</button>
+        </td>
+      </tr>
+      <tr style="color: rgb(113, 107, 107); font-size: large;">
+        <td>Power Tools</td>
+        <td>Investor Relations</td>
+        <td>Investor Relations</td>
+        <td>Experts</td>
+      </tr>
+      <tr style="color: rgb(113, 107, 107); font-size: large;">
+        <td>Marketing Service</td>
+        <td>Terms of Service</td>
+        <td>Terms of Service</td>
+        <td>Agencies</td>
+      </tr>
+    </table>
+    <br><br>
+    <div class="span" style="margin-left: 25px;">
+    <span style="color: white;">Copyright ©2024 All rights reserved | This template is made with</span> <span style="color: lawngreen;">Colorlib</span>
+    </div>
+    <div class="cont">
+      <div class="fb"><i class="fa fa-facebook"></i></div>
+      <div class="tw"><i class="fa fa-linkedin"></i></div>
+      <div class="gl"><i class="fa fa-twitter"></i></div>
+      <div class="Be"><i class="fa fa-instagram"></i></div>
+
+    </div>
+  </div>
+
+
+</body>
+</html>
+
+
